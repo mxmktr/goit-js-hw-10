@@ -11,7 +11,7 @@ export function fetchCountries(searchCountries) {
     `${URL}${searchCountries}?fields=${name},${capital},${population},${flags},${languages}`
   ).then(response => {
     if (!response.ok) {
-      throw new Error('Oops, there is no country with that name');
+      throw new Error();
     }
     return response.json();
   });
